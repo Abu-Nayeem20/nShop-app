@@ -1,0 +1,44 @@
+.navTop-sec{
+    background-color: #01a3a4;
+    padding: 10px 0 0;
+}
+.navTop-content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.user-regi ul{
+    display: flex;
+}
+.user-regi ul li{
+    list-style: none;
+}
+.user-regi ul li a{
+    margin: 0 20px;
+    text-decoration: none;
+    color: aliceblue;
+    font-size: 18px;
+    /* font-weight: 700; */
+}
+.welcome-text p{
+    color: aliceblue;
+    font-size: 18px;
+}
+
+.profile-area p{
+   padding: 5px 20px; 
+}
+.profile-icon{
+    width: 30px;
+    border-radius: 50%;
+}
+.dropdown-menu[data-bs-popper] {
+    top: 100%;
+    left: -100%;
+    margin-top: .125rem;
+    padding: 40px 20px;
+}
+.dropdown-menu a:hover{
+    background: none;
+}

@@ -1,0 +1,11 @@
+.product-img{
+    width: 100px;
+}
+.item-tr{
+
+}
+.remove-item i{
+    font-size: 25px;
+    color: crimson;
+    cursor: pointer;
+}

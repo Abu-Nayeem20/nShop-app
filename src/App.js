@@ -1,56 +1,49 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
+import React, { useEffect } from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Home from './Pages/HomePage/Home/Home';
+import { Route, Routes } from 'react-router-dom';
+import About from './Pages/AboutPage/About';
+import Login from './Pages/UserMaintain/Login/Login';
+import ProductDetails from './Pages/SharedCompotents/ProductDetails/ProductDetails';
+import Shop from './Pages/ShopPage/Shop';
+import Cart from './Pages/SharedCompotents/Cart/Cart';
+import initializeAuthentication from './Firebase/firebase.init';
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { useDispatch, useSelector } from 'react-redux';
+import { storeUser } from './Redux/Slices/productsSlice';
+import PrivateRoute from './Pages/UserMaintain/PrivateRoute/PrivateRoute';
 
 function App() {
+
+  initializeAuthentication();
+  const auth = getAuth();
+  const user = useSelector((state) => state.products.user);
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      if (user) {
+        dispatch(storeUser({name: user.displayName, email: user.email, photo: user.photoURL}));
+      } else {
+        dispatch(storeUser(undefined));
+      }
+    });
+  }, [auth, dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <Counter />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className="App-link"
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className="App-link"
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className="App-link"
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+    <div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/productDetails/:id" element={<ProductDetails />} />
+        <Route path="about" element={<About />} />
+        <Route path="cart" element={<PrivateRoute>
+          <Cart />
+        </PrivateRoute>} />
+        <Route path="login" element={<Login />} />
+      </Routes>
     </div>
   );
 }

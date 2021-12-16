@@ -1,0 +1,46 @@
+.login-page,
+.register-page{
+    padding: 100px 0;
+}
+.form-area{
+    background-color: #013a4a;
+    padding: 60px 50px;
+    border-radius: 10px;
+    text-align: center;
+}
+.login-top-text h2{
+    color: coral;
+    font-weight: 700;
+    font-size: 30px;
+    padding: 20px 0;
+}
+.login-top-text p{
+    color: red;
+    font-size: 18px;
+}
+.google-signin-btn{
+    text-align: center;
+    margin: 40px 0;
+}
+.google-signin-btn button{
+    border: 0;
+    padding: 10px 20px;
+    font-size: 25px;
+    border-radius: 10px;
+    background-color: rgba(255, 127, 80, 0.801);
+    color: #000;
+}
+
+/* Respnsive */
+
+@media (max-width: 768px) {
+    .google-signin-btn button{
+        font-size: 18px;
+    }
+    .new-user h2{
+        font-size: 18px;
+    }
+    .login-top-text h2{
+        font-size: 20px;
+    }
+}

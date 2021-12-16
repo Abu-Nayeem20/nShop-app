@@ -1,0 +1,18 @@
+.cart-no-product{
+    padding: 100px 0 40px;
+    text-align: center;
+}
+.cart-no-product h2{
+    font-size: 44px;
+    font-weight: 700;
+    color: #013a4a;
+}
+.cart-no-product button{
+    background-color: rgba(255, 127, 80, 0.719);
+    font-size: 20px;
+    font-weight: 700;
+    padding: 10px 30px;
+    border-radius: 10px;
+    border: 0;
+    color: #013a4a;
+}

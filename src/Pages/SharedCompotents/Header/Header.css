@@ -1,0 +1,58 @@
+.logo{
+    width: 60px;
+}
+.search-bar{
+    position: relative;
+    width: 300px;
+}
+.search-bar input{
+    border: 2px solid #01a3a4;
+    padding: 6px;
+    border-radius: 20px;
+    width: 100%;
+    color: #01a3a4;
+}
+.search-bar i{
+    font-size: 18px;
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    transform: translate(-5%, -50%);
+    color: #01a3a4;
+}
+.wishNcart-icon i{
+    font-size: 25px;
+    color: #01a3a4;
+    margin: 0 5px;
+    position: relative;
+    /* padding: 5px; */
+}
+.wishNcart-icon i span{
+    color: #fff;
+    font-size: 18px;
+    position: absolute;
+    top: -10px;
+    right: 0;
+    padding-bottom: 5px;
+}
+.navbar-toggler{
+    background-color: #01a3a4;
+    border-radius: 5px;
+}
+.offcanvas{
+    background-color: #ddd;
+}
+.offcanvas-title{
+    font-size: 25px;
+    font-weight: 700;
+}
+.navbar-nav a{
+    color: #01a3a4;
+    border-bottom: 1px solid #01a3a4;
+    font-size: 18px;
+    font-weight: 600;
+    transition: .5s;
+}
+.navbar-nav a:hover{
+    color: brown;
+}

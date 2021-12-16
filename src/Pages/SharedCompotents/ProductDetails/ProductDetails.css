@@ -1,0 +1,95 @@
+.product-details-heading{
+    background-image: url('https://i.ibb.co/vHLQCTQ/room-gf1672833a-1280.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 100px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.507);
+    background-blend-mode: multiply;
+}
+.product-details-heading h2{
+    font-size: 84px;
+    font-weight: 700;
+    color: aliceblue;
+}
+.product-details-heading p{
+    font-size: 25px;
+    color: aliceblue;
+    letter-spacing: 5px;
+}
+.product-details-all{
+    padding: 100px 0;
+}
+.product-information{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.product-info-top{}
+.product-info-top h2{
+    font-size: 44px;
+    font-weight: 700;
+    color: #013a4a;
+}
+.product-info-top h5{
+    font-size: 36px;
+    font-weight: 700;
+    color: coral;
+}
+.product-info-top p{
+    background-color: rgba(255, 127, 80, 0.541);
+    display: inline-block;
+    margin: 20px 10px;
+    padding: 10px 30px;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #013a4a;
+}
+.product-amount-input{
+    margin: 10px 0 30px;
+}
+.plus i{
+    background-color: rgba(255, 127, 80, 0.541);
+    padding: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    cursor: pointer;
+}
+.minus i{
+    background-color: rgba(255, 127, 80, 0.541);
+    padding: 10px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    cursor: pointer;
+}
+.product-amount-input input{
+    border: 2px solid coral;
+    padding: 4px;
+}
+.buy-btn{
+    border: 2px solid rgba(255, 127, 80, 0.541);
+    background-color: #013a4a;
+    padding: 10px 30px;
+    color: #fff;
+    font-size: 20px;
+    border-radius: 8px;
+    transition: .8s;
+}
+.buy-btn:hover{
+    background-color: transparent;
+    color: #013a4a;
+}
+.product-description{
+    padding-top: 30px;
+}
+.product-description h3{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+}
+.product-description p{
+    font-size: 18px;
+}

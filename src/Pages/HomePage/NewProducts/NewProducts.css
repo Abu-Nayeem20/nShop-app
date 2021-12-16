@@ -1,0 +1,11 @@
+.new-products{
+    padding: 80px 0;
+}
+.new-products-heading{
+    padding: 10px 0 40px;
+}
+.new-products-heading h2{
+    font-size: 44px;
+    font-weight: 700;
+    color: #013a4a;
+}

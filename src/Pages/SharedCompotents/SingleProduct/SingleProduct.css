@@ -1,0 +1,41 @@
+
+.product-title h4{
+    font-size: 20px;
+    color: #013a4a;
+}
+.price p{
+    font-size: 20px;
+    color: brown;
+    font-weight: 700;
+}
+.view-cart{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.view-cart i{
+    width: 40px;
+    height: 40px;
+    border: 2px solid brown;
+    font-size: 20px;
+    color: brown;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: .8s;
+}
+.view-cart a{
+    text-decoration: none;
+}
+.product img{
+    transition: .5s;
+}
+.product:hover img{
+    transform: scale(1.2);
+}
+.product:hover .view-cart i{
+    background-color: brown;
+    color: #fff;
+}
