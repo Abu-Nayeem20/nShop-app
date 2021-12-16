@@ -13,7 +13,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState({});
 
     useEffect( () => {
-        fetch(`https://secret-mountain-73898.herokuapp.com/products/${id}`)
+        fetch(`http://localhost:5000/products/${id}`)
         .then(res => res.json())
         .then(data => {
             setProduct(data);
@@ -41,14 +41,14 @@ const ProductDetails = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className='product-thumb'>
-                                    <img className='img-fluid' src={product.img} alt="Product" />
+                                    <img className='img-fluid' src={product?.img} alt="Product" />
                                 </div>
                             </div>
                             <div className="col-md-6">
                                 <div className='product-information'>
                                     <div className='product-info-top'>
-                                    <h2>{product.name}</h2>
-                                    <h5>${product.price}</h5>
+                                    <h2>{product?.name}</h2>
+                                    <h5>${product?.price}</h5>
                                     <p>Category: Furniture</p>
                                     <p>Stock: Available</p>
                                     </div>
@@ -67,7 +67,7 @@ const ProductDetails = () => {
                             <div className="col-md-8 offset-md-2">
                             <div className='product-description'>
                             <h3>Description:</h3>
-                            <p>{product.desc}</p>
+                            <p>{product?.desc}</p>
                         </div>
                             </div>
                         </div>

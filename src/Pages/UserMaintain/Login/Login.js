@@ -12,16 +12,32 @@ const Login = () => {
 
     const location = useLocation();
     const navigate = useNavigate();
-    const redirect_uri = location.state?.from || '/home';
+    const redirect_uri = location.state?.from || '/';
+
+    // SAVE USER TO DATABASE
+    const saveUser = (displayName, email) => {
+        const user = {displayName, email};
+        // console.log(user)
+            
+        fetch('http://localhost:5000/users', {
+            method: "PUT",
+            headers: {
+                'content-type' : 'application/json'
+            },
+            body: JSON.stringify(user)
+            })
+        .then()
+     };
 
     // Google signIn
     const handleGoogleSignIn = () => {
         signInWithPopup(auth, provider)
         .then((result) => {
             const user = result.user;
-            navigate.push(redirect_uri);
+            navigate(redirect_uri);
+            saveUser(user.displayName, user.email);
             setError('');
-            // console.log(user);
+            
         }).catch((error) => {
             setError(error.message);
         });

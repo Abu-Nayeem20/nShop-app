@@ -12,6 +12,7 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useDispatch, useSelector } from 'react-redux';
 import { storeUser } from './Redux/Slices/productsSlice';
 import PrivateRoute from './Pages/UserMaintain/PrivateRoute/PrivateRoute';
+import CheckOut from './Pages/UserDashboard/CheckOut/CheckOut';
 
 function App() {
 
@@ -43,6 +44,7 @@ function App() {
           <Cart />
         </PrivateRoute>} />
         <Route path="login" element={<Login />} />
+        <Route path="checkout" element={<CheckOut />} />
       </Routes>
     </div>
   );

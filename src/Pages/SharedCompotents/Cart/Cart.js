@@ -11,6 +11,18 @@ import SingleCart from './SingleCart/SingleCart';
 const Cart = () => {
     const cart_item = useSelector((state) => state.products.cartItems);
     // console.log(cart_item)
+
+    let totalQuantity = 0;
+    let total = 0;
+    for (const product of cart_item) {
+        total = total + product.price * product.quantity;
+        totalQuantity = totalQuantity + product.quantity;
+    }
+    const shipping = total > 0 ? 50 : 0;
+    const tax = (total + shipping) * 0.10;
+    const grandTotal = total + shipping + tax;
+    // console.log(grandTotal)
+
     return (
         <div>
             <NavTop />
@@ -57,6 +69,43 @@ const Cart = () => {
                             }
                         </tbody>
                         </Table>
+                        <div className='cart-calculation'>
+                            <div className="row">
+                                <div className="col-md-6 offset-md-3">
+                                <Table responsive>
+                                <thead>
+                                    <tr>
+                                    <th>Cart Total</th>
+                                    <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Sub Total</td>
+                                        <td>$ {total.toFixed(2)}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Shipping</td>
+                                        <td>$ {shipping.toFixed(2)} <small>(Flat Rate)</small></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Tax <small>(10%)</small></td>
+                                        <td>$ {tax.toFixed(2)}</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Total</td>
+                                        <td>$ {grandTotal.toFixed(2)}</td>
+                                    </tr>
+                                </tbody>
+                                </Table>
+                                </div>
+                            </div>
+                        </div>  
+                        <div>
+                            <Link to="/checkout">
+                                <button className='checkout-btn'>PROCEED TO CHECKOUT</button>
+                            </Link>
+                        </div>
                         </div>
                     </div>
                     }   

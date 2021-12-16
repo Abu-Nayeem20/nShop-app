@@ -12,6 +12,7 @@
     font-size: 84px;
     font-weight: 700;
     color: aliceblue;
+    letter-spacing: 5px;
 }
 .product-details-heading p{
     font-size: 25px;
@@ -27,7 +28,6 @@
     flex-direction: column;
     justify-content: center;
 }
-.product-info-top{}
 .product-info-top h2{
     font-size: 44px;
     font-weight: 700;

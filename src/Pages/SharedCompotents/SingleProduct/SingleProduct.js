@@ -24,7 +24,7 @@ const SingleProduct = ({ product }) => {
                 <h4>{name}</h4>
             </div>
             <div className='price'>
-            <p>{price}</p>
+            <p>$ {price}</p>
             </div>
             <div className='view-cart'>    
             <div className='view-product'>
