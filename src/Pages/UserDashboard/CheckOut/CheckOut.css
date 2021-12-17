@@ -1,0 +1,43 @@
+.checkout-page{
+    padding: 100px 0;
+}
+.your-order h2,
+.shipping-info h2{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+    border-bottom: 5px solid coral;
+    padding-bottom: 10px;
+    margin-bottom: 50px;
+}
+.your-order tbody{
+    text-align: center;
+}
+.payment-method{
+    padding: 50px 0;
+}
+.payment-method h2{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+    border-bottom: 5px solid coral;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+.payment-method label,
+.payment-method input{
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+.form-check{
+    margin-left: 30px;
+}
+.order-action button{
+    padding: 10px 30px;
+    font-size: 25px;
+    font-weight: 700;
+    color: #013a4a;
+    background-color: rgba(255, 127, 80, 0.726);
+    border: 0;
+    border-radius: 6px;
+}

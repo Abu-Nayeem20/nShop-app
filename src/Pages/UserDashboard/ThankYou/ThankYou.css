@@ -1,0 +1,40 @@
+.nshop-logo{
+    width: 100px;
+    margin: 0 auto;
+}
+.nshop-logo img{
+    width: 100%;
+}
+.thank-page{
+    padding: 100px 0;
+}
+.thank-content{
+    padding: 50px 30px;
+    text-align: center;
+}
+.thank-you{
+    padding: 40px 0;
+}
+.thank-you h2{
+    font-size: 44px;
+    color: #013a4a;
+    font-weight: 700;
+}
+.thank-you p{
+    font-size: 25px;
+    color: coral;
+}
+.happy h2{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+    letter-spacing: 4px;
+}
+.social-icon{
+    padding: 20px 0;
+}
+.social-icon i{
+    font-size: 30px;
+    margin: 0 8px;
+    color: coral;
+}

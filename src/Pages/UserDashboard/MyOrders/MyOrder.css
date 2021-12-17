@@ -1,0 +1,11 @@
+
+.myOrder-content{
+    padding: 100px 10px;
+}
+.myOrder-content thead{
+    background-color: coral;
+    text-align: center;
+}
+.myOrder-content tbody tr{
+    text-align: center;
+}

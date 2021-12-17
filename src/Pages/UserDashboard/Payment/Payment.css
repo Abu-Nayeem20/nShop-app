@@ -1,0 +1,55 @@
+
+.payment-content{
+    padding: 100px 0;
+}
+.payment-area{
+    /* border: 1px solid red; */
+    padding: 50px 30px;
+}
+.payment-top-logo{
+    width: 80px;
+    margin: 0 auto;
+}
+.stripe-logo{
+    width: 150px;
+    margin: 0 auto;
+}
+.stripe-logo img,
+.payment-top-logo img{
+    width: 100%;
+}
+.payment-title{
+    text-align: center;
+    padding-top: 8px;
+}
+.payment-title h3{
+    font-size: 25px;
+    font-weight: 700;
+    color: #013a4a;
+    letter-spacing: 3px;
+}
+.payment-text{
+    padding: 8px 0;
+}
+.payment-text h5{
+    font-size: 20px;
+    font-weight: 600;
+    color: #013a4a;
+}
+.inputField{
+    width: 100%;
+    padding: 30px 10px;
+    border: 2px solid #ddd;
+    border-radius: 20px;
+    margin: 20px 0;
+}
+.pay-btn{
+    margin-top: 10px;
+    padding: 10px 30px;
+    font-size: 18px;
+    color: #013a4a;
+    background-color: rgba(255, 127, 80, 0.712);
+    border: 0;
+    border-radius: 8px;
+    font-weight: 700;
+}

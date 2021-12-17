@@ -12,6 +12,8 @@ const Header = () => {
     
     const cart_item = useSelector((state) => state.products.cartItems);
 
+    const user = useSelector((state) => state.products.user);
+
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -75,6 +77,9 @@ const Header = () => {
                     <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
                     <Nav.Link as={Link} to="/cart">My Cart</Nav.Link>
+                    {user?.email &&
+                    <Nav.Link as={Link} to="/myOrders">My Orders</Nav.Link>
+                    }
                     </Nav>
                 </Offcanvas.Body>
                 </Navbar.Offcanvas>
