@@ -78,6 +78,7 @@ const Header = () => {
                     <Nav.Link as={Link} to="/home">Home</Nav.Link>
                     <Nav.Link as={Link} to="/shop">Shop</Nav.Link>
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
+                    <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
                     <Nav.Link as={Link} to="/cart">My Cart</Nav.Link>
                     {user?.email &&
                     <Nav.Link as={Link} to="/myOrders">My Orders</Nav.Link> }

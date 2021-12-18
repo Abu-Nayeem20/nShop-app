@@ -10,3 +10,12 @@ body{
     font-weight: 700;
     color: #013a4a;
 }
+
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .banner-text h2{
+        font-size: 34px;
+    }
+}

@@ -8,3 +8,9 @@
 .manage-product-page table{
     text-align: center;
 }
+.page-title h2{
+    font-size: 36px;
+    font-weight: 700;
+    color: #013a4a;
+    padding-bottom: 30px;
+}

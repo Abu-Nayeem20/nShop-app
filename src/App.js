@@ -9,7 +9,7 @@ import Shop from './Pages/ShopPage/Shop';
 import Cart from './Pages/SharedCompotents/Cart/Cart';
 import initializeAuthentication from './Firebase/firebase.init';
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { storeUser } from './Redux/Slices/productsSlice';
 import PrivateRoute from './Pages/UserMaintain/PrivateRoute/PrivateRoute';
 import CheckOut from './Pages/UserDashboard/CheckOut/CheckOut';
@@ -23,12 +23,14 @@ import AddProduct from './Pages/AdminDashboard/AddProduct/AddProduct';
 import ManageUsers from './Pages/AdminDashboard/ManageUsers/ManageUsers';
 import AdminRoute from './Pages/AdminDashboard/AdminRoute/AdminRoute';
 import NotFound from './Pages/NotFound/NotFound';
+import Contact from './Pages/ContactPage/Contact';
+import Scroller from './Pages/SharedCompotents/Scroller/Scroller';
 
 function App() {
 
   initializeAuthentication();
   const auth = getAuth();
-  const user = useSelector((state) => state.products.user);
+  // const user = useSelector((state) => state.products.user);
 
   const dispatch = useDispatch();
 
@@ -63,6 +65,9 @@ function App() {
         <Route path="/myOrders" element={<PrivateRoute>
           <MyOrders />
         </PrivateRoute>} />
+        <Route path="/contact" element={<PrivateRoute>
+          <Contact />
+        </PrivateRoute>} />
         <Route path="/thankYou" element={<PrivateRoute>
           <ThankYou />
         </PrivateRoute>} />
@@ -83,6 +88,7 @@ function App() {
           </AdminRoute> } />
         <Route path="*" element={ <NotFound /> } />
       </Routes>
+      <Scroller />
     </div>
   );
 }

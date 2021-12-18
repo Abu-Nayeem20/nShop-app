@@ -5,7 +5,7 @@ import { Navigate, useLocation } from 'react-router-dom';
 const AdminRoute = ({ children, ...rest }) => {
     const user = useSelector((state) => state.products.user);
     const isAdmin = useSelector((state) => state.products.isAdmin)
-    console.log(isAdmin);
+    // console.log(isAdmin);
 
     let location = useLocation();
     

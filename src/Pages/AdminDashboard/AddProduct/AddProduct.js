@@ -1,19 +1,18 @@
 import React, { useState } from 'react';
-import { Form } from 'react-bootstrap';
+import { Form, Modal } from 'react-bootstrap';
 import NavTop from '../../SharedCompotents/NavTop/NavTop';
 import DashboardHeader from '../DashboardHeader/DashboardHeader';
 import './AddProduct.css'
 
 const AddProduct = () => {
 
+    const [smShow, setSmShow] = useState(false);
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [category, setCategory] = useState('');
     const [stock, setStock] = useState('');
     const [description, setDescription] = useState('');
     const [image, setImage] = useState(null);
-
-    const [success, setSuccess] = useState(false);
 
 const handleProductUp = e => {
     e.preventDefault();
@@ -34,8 +33,8 @@ const handleProductUp = e => {
         .then(res => res.json())
         .then(data => {
             if (data.insertedId) {
-                setSuccess('Product added successfully')
-                console.log('Product added successfully')
+                setSmShow(true);
+                e.target.reset();
             }
         })
         .catch(error => {
@@ -65,11 +64,26 @@ const handleProductUp = e => {
                 <button className='save-btn' type='submit'>Save</button>
                 </Form>
             </div>
-            {success && <p style={{ color: 'green' }}>{success}</p>}
+           
                 </div>
             </div>
             </div>
             </div>
+            <Modal
+            size="sm"
+            show={smShow}
+            onHide={() => setSmShow(false)}
+            aria-labelledby="example-modal-sizes-title-sm"
+        >
+            <Modal.Header closeButton>
+            <Modal.Title id="example-modal-sizes-title-sm">
+                Hey
+            </Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+                <h4>Product Added Successfully</h4>
+            </Modal.Body>
+        </Modal>
         </div>
     );
 };

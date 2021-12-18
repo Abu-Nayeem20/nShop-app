@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useDispatch } from 'react-redux';
-import { useParams } from 'react-router-dom';
-import { decreaseInputValue, increaseInputValue } from '../../../Redux/Slices/productsSlice';
+import { useNavigate, useParams } from 'react-router-dom';
+import { addToCart, decreaseInputValue, increaseInputValue } from '../../../Redux/Slices/productsSlice';
 import PopularProducts from '../../HomePage/PopularProducts/PopularProducts';
 import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
@@ -25,6 +25,14 @@ const ProductDetails = () => {
     const count = useSelector((state) => state.products.productInputAmount);
     // console.log(count)
     // console.log(product)
+
+    const navigate = useNavigate();
+
+    const handleBuyNow = () => {
+        const newProduct = {...product, quantity: count}
+        dispatch(addToCart(newProduct));
+        navigate('/cart');
+    }
 
     return (
         <div>
@@ -59,7 +67,7 @@ const ProductDetails = () => {
                                         <span className='minus'><i onClick={() => dispatch(decreaseInputValue())} className="fas fa-minus"></i></span>
                                     </div>
                                     <div>
-                                        <button className='buy-btn'>Buy Now</button>
+                                        <button onClick={handleBuyNow} className='buy-btn'>Buy Now</button>
                                     </div>
                                 </div>
                             </div>

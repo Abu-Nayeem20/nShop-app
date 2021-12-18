@@ -1,0 +1,27 @@
+.contact-page{
+    padding: 100px 0;
+}
+.contact-heading{
+    text-align: center;
+}
+.contact-heading h2{
+    font-size: 44px;
+    font-weight: 700;
+    color: #013a4a;
+}
+.contact-heading p{
+    font-size: 20px;
+}
+.contact-submit{
+    background-color: rgba(255, 127, 80, 0.753);
+    font-size: 25px;
+    font-weight: 700;
+    padding: 10px 30px;
+    color: #013a4a;
+    border: 0;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.contact-form{
+    padding: 60px 30px;
+}

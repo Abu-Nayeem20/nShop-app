@@ -25,3 +25,15 @@
     background-color: transparent;
     border-radius: 4px;
 }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .category-overlay h2{
+        font-size: 18px;
+        margin-top: 10%;
+    }
+    .category-overlay button{
+        font-size: 14px;
+    }
+}

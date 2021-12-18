@@ -39,6 +39,9 @@ const ManageProducts = () => {
             <DashboardHeader />
             <div className="manage-product-page">
                 <div className="container">
+                    <div className='page-title'>
+                        <h2>Products Management</h2>
+                    </div>
                 <div className='row'>
                 <Table responsive>
                         <thead>

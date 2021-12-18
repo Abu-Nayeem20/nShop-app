@@ -21,6 +21,9 @@ const ManageUsers = () => {
             <DashboardHeader />
             <div className='manage-users-page'>
                 <div className="container">
+                <div className='page-title'>
+                    <h2>Users Management</h2>
+                </div>
                     <div className="row">
                             <Table responsive>
                         <thead>

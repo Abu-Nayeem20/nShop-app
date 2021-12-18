@@ -1,0 +1,17 @@
+#scrll{
+	position: fixed;
+	bottom: 50px;
+	right: 50px;
+	cursor: pointer;
+}
+#scrll i{
+	background: #013a4a;
+	color: #ffffff;
+	width: 40px;
+	height: 40px;
+	font-size: 20px;
+	border: 2px solid #F90716;
+	border-radius: 50%;
+	text-align: center;
+	padding-top: 6px;
+}

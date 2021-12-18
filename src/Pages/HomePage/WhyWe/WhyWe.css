@@ -35,3 +35,17 @@
     border-radius: 4px;
     padding: 10px 30px;
 }
+
+/* Responsive */
+
+@media (max-width: 768px) {
+    .whywe-heading h2{
+        font-size: 34px;
+    }
+    .quality i{
+        font-size: 20px;
+    }
+    .quality span{
+        font-size: 18px;
+    }
+}

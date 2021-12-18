@@ -21,6 +21,9 @@ const AllOrders = () => {
             <DashboardHeader />
             <div className='allOrders-content'>
                 <div className="container">
+                <div className='page-title'>
+                    <h2>Orders Management</h2>
+                </div>
                   <div className="row">
                   <Table responsive>
                         <thead>
