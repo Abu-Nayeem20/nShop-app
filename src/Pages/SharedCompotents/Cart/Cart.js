@@ -3,6 +3,7 @@ import { Table } from 'react-bootstrap';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import PopularProducts from '../../HomePage/PopularProducts/PopularProducts';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import NavTop from '../NavTop/NavTop';
 import './Cart.css'
@@ -111,6 +112,7 @@ const Cart = () => {
                     }   
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

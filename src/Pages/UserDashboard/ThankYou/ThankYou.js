@@ -2,6 +2,7 @@ import React from 'react';
 import Header from '../../SharedCompotents/Header/Header';
 import logo from '../../../images/nshop-logo.png';
 import './ThankYou.css'
+import Footer from '../../SharedCompotents/Footer/Footer';
 
 const ThankYou = () => {
     return (
@@ -32,6 +33,7 @@ const ThankYou = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

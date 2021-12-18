@@ -4,6 +4,9 @@ import { useSelector } from 'react-redux';
 import Header from '../../SharedCompotents/Header/Header';
 import SingleOrder from './SingleOrder';
 import './MyOrder.css'
+import Footer from '../../SharedCompotents/Footer/Footer';
+import { Link } from 'react-router-dom';
+import PopularProducts from '../../HomePage/PopularProducts/PopularProducts';
 
 const MyOrders = () => {
     const [myOrders, setMyOrders] = useState([]);
@@ -30,6 +33,18 @@ const MyOrders = () => {
                     </div>
                 </div>
                 <div className='myOrder-content'>
+                {myOrders.length === 0 ?
+                    <div className="container">
+                    <div className='cart-no-product'>
+                        <h2>Looks you haven't bought any product. </h2>
+                        <Link to="/shop">
+                        <button>Shop Now</button> 
+                        </Link>
+                        <h2>Happy Shopping!</h2>
+                    </div>
+                    <PopularProducts />    
+                    </div>
+                    :
                     <div className="container">
                     <div className='row'>
                     <Table responsive>
@@ -53,9 +68,10 @@ const MyOrders = () => {
                         </tbody>
                         </Table>
                     </div>
-                    </div>
+                    </div>}
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

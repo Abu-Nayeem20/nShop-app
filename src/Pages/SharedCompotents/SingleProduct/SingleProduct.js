@@ -34,7 +34,7 @@ const SingleProduct = ({ product }) => {
             </div>
             {cartProducts ?
                 <div className='add-cart'>
-                <i className="fas fa-check"></i>
+                <Link to="/cart"><button>View Cart</button></Link>
                 </div>
                 :
                 <div className='add-cart'>

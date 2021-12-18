@@ -1,0 +1,13 @@
+
+.manage-users-page{
+    padding: 100px 0;
+}
+.manage-users-page tbody img{
+    border-radius: 50%;
+}
+.manage-users-page table{
+    text-align: center;
+}
+.manage-users-page thead{
+    background-color: coral;
+}

@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import { decreaseInputValue, increaseInputValue } from '../../../Redux/Slices/productsSlice';
 import PopularProducts from '../../HomePage/PopularProducts/PopularProducts';
+import Footer from '../Footer/Footer';
 import Header from '../Header/Header';
 import NavTop from '../NavTop/NavTop';
 import './ProductDetails.css'
@@ -75,6 +76,7 @@ const ProductDetails = () => {
                 </div>
             </div>
             <PopularProducts></PopularProducts>
+            <Footer />
         </div>
     );
 };

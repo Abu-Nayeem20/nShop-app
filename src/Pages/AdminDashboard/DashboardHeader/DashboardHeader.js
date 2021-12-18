@@ -25,6 +25,7 @@ const DashboardHeader = () => {
                     <Nav.Link as={Link} to="/dashboard/manage-products">Manage Products</Nav.Link>
                     <Nav.Link as={Link} to="/dashboard/addProduct">Upload Product</Nav.Link>
                     <Nav.Link as={Link} to="/dashboard/allOrders">Manage Orders</Nav.Link>
+                    <Nav.Link as={Link} to="/dashboard/manageUsers">Manage Users</Nav.Link>
                     </Nav>
                 </Offcanvas.Body>
                 </Navbar.Offcanvas>

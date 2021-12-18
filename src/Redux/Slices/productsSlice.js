@@ -17,12 +17,22 @@ export const fetchOrders = createAsyncThunk(
     }
 );
 
+export const fetchUsers = createAsyncThunk(
+    'user/fetchUsers',
+    async () => {
+      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/allUsers').then(res=> res.json())
+      return response
+    }
+);
+
 const productsSlice = createSlice({
     name: 'product',
     initialState: {
         products: [],
         orders: [],
+        users: [],
         user: {},
+        isAdmin: false,
         productInputAmount: 1,
         cartItems: [],
         status: 'idle'
@@ -52,6 +62,14 @@ const productsSlice = createSlice({
         storeUser: (state, action) => {
             state.user = action.payload;
         },
+        userRole: (state, {payload}) => {
+            if (payload === "Admin") {
+                state.isAdmin = true;
+            }
+            else{
+                state.isAdmin = false;
+            }
+        },
     },
     extraReducers: (builder) => {
         builder.addCase(fetchProducts.fulfilled, (state, action) => {
@@ -68,10 +86,17 @@ const productsSlice = createSlice({
         builder.addCase(fetchOrders.pending, (state, action) => {
             state.status = 'pending';
         })
+        builder.addCase(fetchUsers.fulfilled, (state, action) => {
+          state.users = action.payload;
+          state.status = 'success'
+        })
+        builder.addCase(fetchUsers.pending, (state, action) => {
+            state.status = 'pending';
+        })
     },
     
 });
 
-export const { increaseInputValue, decreaseInputValue, addToCart, removeFromCart, storeUser, refreshCart, deleteProduct } = productsSlice.actions;
+export const { increaseInputValue, decreaseInputValue, addToCart, removeFromCart, storeUser, refreshCart, deleteProduct, userRole } = productsSlice.actions;
 
 export default productsSlice.reducer;

@@ -3,6 +3,7 @@ import Header from '../../SharedCompotents/Header/Header';
 import './Login.css';
 import { getAuth, signInWithPopup, GoogleAuthProvider } from "firebase/auth";
 import { useLocation, useNavigate } from 'react-router-dom';
+import Footer from '../../SharedCompotents/Footer/Footer';
 
 const Login = () => {
 
@@ -15,8 +16,8 @@ const Login = () => {
     const redirect_uri = location.state?.from || '/';
 
     // SAVE USER TO DATABASE
-    const saveUser = (displayName, email) => {
-        const user = {displayName, email};
+    const saveUser = (displayName, email, photo) => {
+        const user = {displayName, email, photo};
         // console.log(user)
             
         fetch('https://sleepy-bayou-81445.herokuapp.com/users', {
@@ -35,7 +36,7 @@ const Login = () => {
         .then((result) => {
             const user = result.user;
             navigate(redirect_uri);
-            saveUser(user.displayName, user.email);
+            saveUser(user.displayName, user.email, user.photoURL);
             setError('');
             
         }).catch((error) => {
@@ -65,6 +66,7 @@ const Login = () => {
                 </div>
              </div>
          </div>
+         <Footer />
          </div>
     );
 };

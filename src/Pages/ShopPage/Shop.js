@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { fetchProducts } from '../../Redux/Slices/productsSlice';
+import Footer from '../SharedCompotents/Footer/Footer';
 import Header from '../SharedCompotents/Header/Header';
 import NavTop from '../SharedCompotents/NavTop/NavTop';
 import SingleProduct from '../SharedCompotents/SingleProduct/SingleProduct';
@@ -42,6 +43,7 @@ const Shop = () => {
                     </div>
                 </div>
             </div>
+            <Footer />
         </div>
     );
 };

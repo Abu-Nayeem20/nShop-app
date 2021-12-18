@@ -7,6 +7,7 @@ import { useParams } from 'react-router-dom';
 import { loadStripe } from '@stripe/stripe-js';
 import { Elements } from '@stripe/react-stripe-js';
 import PaymentForm from './PaymentForm';
+import Footer from '../../SharedCompotents/Footer/Footer';
 
 const stripePromise = loadStripe('pk_test_51Jw77eAPJel30nQhuBFLRAPWTlvToWoSiwKEicvArppHWK7bxQPOd3VS3J9F5rjObfpmiIAhgLDspX3GqpEWBbuZ00rySPrxrO');
 
@@ -70,6 +71,7 @@ const Payment = () => {
                         </div>
                     </div>
             </div>
+            <Footer />
         </div>
     );
 };

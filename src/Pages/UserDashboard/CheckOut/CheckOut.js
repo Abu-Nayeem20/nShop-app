@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { refreshCart } from '../../../Redux/Slices/productsSlice';
+import Footer from '../../SharedCompotents/Footer/Footer';
 import Header from '../../SharedCompotents/Header/Header';
 import './CheckOut.css';
 
@@ -35,7 +36,7 @@ const CheckOut = () => {
         city: '', 
         address: '', 
         note: '',
-        products: cart_item,
+        // products: cart_item,
         totalQuantity: totalQuantity,
         totalPrice: grandTotal.toFixed(2)
     }
@@ -195,6 +196,7 @@ const CheckOut = () => {
                         </div>
                     </div>
                 </div>
+                <Footer />
         </div>
     );
 };

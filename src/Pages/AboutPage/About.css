@@ -1,0 +1,25 @@
+
+.about-text{
+    padding: 100px 0;
+}
+.our-history{
+    padding-bottom: 40px;
+    text-align: center;
+}
+.our-history img{
+    width: 100px;
+}
+.our-goals h2,
+.our-history h2{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+    padding: 20px 0;
+}
+.our-goals p,
+.our-history p{
+    font-size: 18px;
+}
+.our-goals{
+    text-align: center;
+}

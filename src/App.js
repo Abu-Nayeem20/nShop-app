@@ -20,6 +20,9 @@ import Dashboard from './Pages/AdminDashboard/AllOrders/Dashboard/Dashboard';
 import AllOrders from './Pages/AdminDashboard/AllOrders/AllOrders';
 import ManageProducts from './Pages/AdminDashboard/ManageProducts/ManageProducts';
 import AddProduct from './Pages/AdminDashboard/AddProduct/AddProduct';
+import ManageUsers from './Pages/AdminDashboard/ManageUsers/ManageUsers';
+import AdminRoute from './Pages/AdminDashboard/AdminRoute/AdminRoute';
+import NotFound from './Pages/NotFound/NotFound';
 
 function App() {
 
@@ -63,18 +66,22 @@ function App() {
         <Route path="/thankYou" element={<PrivateRoute>
           <ThankYou />
         </PrivateRoute>} />
-        <Route path="/dashboard" element={<PrivateRoute>
+        <Route path="/dashboard" element={<AdminRoute>
           <Dashboard />
-        </PrivateRoute>} />
-        <Route path="/dashboard/allOrders" element={<PrivateRoute>
+        </AdminRoute>} />
+        <Route path="/dashboard/allOrders" element={<AdminRoute>
           <AllOrders />
-        </PrivateRoute>} />
-        <Route path="/dashboard/manage-products" element={<PrivateRoute>
+        </AdminRoute>} />
+        <Route path="/dashboard/manage-products" element={<AdminRoute>
           <ManageProducts />
-        </PrivateRoute>} />
-        <Route path="/dashboard/addProduct" element={<PrivateRoute>
+        </AdminRoute>} />
+        <Route path="/dashboard/addProduct" element={<AdminRoute>
           <AddProduct />
-        </PrivateRoute>} />
+        </AdminRoute>} />
+        <Route path="/dashboard/manageUsers" element={<AdminRoute>
+          <ManageUsers />
+          </AdminRoute> } />
+        <Route path="*" element={ <NotFound /> } />
       </Routes>
     </div>
   );
