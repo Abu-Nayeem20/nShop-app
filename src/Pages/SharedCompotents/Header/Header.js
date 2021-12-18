@@ -51,7 +51,7 @@ const Header = () => {
                             :
                             displayProduct.map(product => <li
                             key={product._id}
-                            ><Link to={`/productDetails/${product._id}`}>{product.name} <img className='img-fluid' src={product.img} alt={product.name} /></Link></li>)
+                            ><Link to={`/productDetails/${product._id}`}>{product.name} <img className='img-fluid' src={`data:image/png;base64,${product.img}`} alt={product.name} /></Link></li>)
                             }
                         </ul>
                     </div>

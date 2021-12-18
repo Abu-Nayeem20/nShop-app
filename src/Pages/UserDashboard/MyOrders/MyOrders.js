@@ -31,7 +31,7 @@ const MyOrders = () => {
                 </div>
                 <div className='myOrder-content'>
                     <div className="container">
-                    <div>
+                    <div className='row'>
                     <Table responsive>
                         <thead>
                             <tr>

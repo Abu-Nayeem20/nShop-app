@@ -41,7 +41,7 @@ const ProductDetails = () => {
                         <div className="row">
                             <div className="col-md-6">
                                 <div className='product-thumb'>
-                                    <img className='img-fluid' src={product?.img} alt="Product" />
+                                    <img className='img-fluid' src={`data:image/png;base64,${product?.img}`} alt="Product" />
                                 </div>
                             </div>
                             <div className="col-md-6">

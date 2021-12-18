@@ -13,7 +13,7 @@ const SingleCart = ({ item }) => {
 
     return (
         <tr className='item-tr'>
-            <td><Link to={`/productDetails/${_id}`}><img className='product-img' src={img} alt="Product" /></Link></td>
+            <td><Link to={`/productDetails/${_id}`}><img className='product-img' src={`data:image/png;base64,${img}`} alt="Product" /></Link></td>
             <td><Link to={`/productDetails/${_id}`}>{name}</Link></td>
             <td>$ {price}</td>
             <td>{quantity}</td>
