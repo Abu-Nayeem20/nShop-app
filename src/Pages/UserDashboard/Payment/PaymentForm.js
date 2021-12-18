@@ -20,7 +20,7 @@ const PaymentForm = ({ totalPrice, id }) => {
     const user = useSelector((state) => state.products.user);
 
     useEffect( () => {
-        fetch('http://localhost:5000/create-payment-intent', {
+        fetch('https://sleepy-bayou-81445.herokuapp.com/create-payment-intent', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -89,7 +89,7 @@ const PaymentForm = ({ totalPrice, id }) => {
         };      
 
               // Confirm in DB
-        const url = `http://localhost:5000/orders/${id}`;
+        const url = `https://sleepy-bayou-81445.herokuapp.com/orders/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

@@ -1,0 +1,20 @@
+.addProduct-page{
+    padding: 100px 0;
+}
+.addProduct-title h2{
+    font-size: 34px;
+    font-weight: 700;
+    color: #013a4a;
+    letter-spacing: 3px;
+    padding: 5px 0 40px;
+}
+.save-btn{
+    font-size: 20px;
+    font-weight: 700;
+    color: #013a4a;
+    padding: 10px 30px;
+    border: 0;
+    background-color: coral;
+    border-radius: 4px;
+    margin-top: 20px;
+}

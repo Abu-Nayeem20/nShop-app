@@ -1,0 +1,10 @@
+
+.allOrders-content{
+    padding: 100px 0;
+}
+.allOrders-content thead{
+    background-color: coral;
+}
+.allOrders-content table{
+    text-align: center;
+}

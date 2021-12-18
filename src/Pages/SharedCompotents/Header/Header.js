@@ -78,7 +78,10 @@ const Header = () => {
                     <Nav.Link as={Link} to="/about">About</Nav.Link>
                     <Nav.Link as={Link} to="/cart">My Cart</Nav.Link>
                     {user?.email &&
+                    <>
                     <Nav.Link as={Link} to="/myOrders">My Orders</Nav.Link>
+                    <Nav.Link as={Link} to="/dashboard">Dashboard</Nav.Link>
+                    </>
                     }
                     </Nav>
                 </Offcanvas.Body>

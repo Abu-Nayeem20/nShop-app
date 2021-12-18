@@ -16,6 +16,10 @@ import CheckOut from './Pages/UserDashboard/CheckOut/CheckOut';
 import Payment from './Pages/UserDashboard/Payment/Payment';
 import MyOrders from './Pages/UserDashboard/MyOrders/MyOrders';
 import ThankYou from './Pages/UserDashboard/ThankYou/ThankYou';
+import Dashboard from './Pages/AdminDashboard/AllOrders/Dashboard/Dashboard';
+import AllOrders from './Pages/AdminDashboard/AllOrders/AllOrders';
+import ManageProducts from './Pages/AdminDashboard/ManageProducts/ManageProducts';
+import AddProduct from './Pages/AdminDashboard/AddProduct/AddProduct';
 
 function App() {
 
@@ -58,6 +62,18 @@ function App() {
         </PrivateRoute>} />
         <Route path="/thankYou" element={<PrivateRoute>
           <ThankYou />
+        </PrivateRoute>} />
+        <Route path="/dashboard" element={<PrivateRoute>
+          <Dashboard />
+        </PrivateRoute>} />
+        <Route path="/dashboard/allOrders" element={<PrivateRoute>
+          <AllOrders />
+        </PrivateRoute>} />
+        <Route path="/dashboard/manage-products" element={<PrivateRoute>
+          <ManageProducts />
+        </PrivateRoute>} />
+        <Route path="/dashboard/addProduct" element={<PrivateRoute>
+          <AddProduct />
         </PrivateRoute>} />
       </Routes>
     </div>

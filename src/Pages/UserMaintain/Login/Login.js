@@ -19,7 +19,7 @@ const Login = () => {
         const user = {displayName, email};
         // console.log(user)
             
-        fetch('http://localhost:5000/users', {
+        fetch('https://sleepy-bayou-81445.herokuapp.com/users', {
             method: "PUT",
             headers: {
                 'content-type' : 'application/json'

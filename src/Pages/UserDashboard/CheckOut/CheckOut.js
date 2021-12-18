@@ -55,7 +55,7 @@ const CheckOut = () => {
     const handleOrderPlace = e => {
         e.preventDefault();
 
-        fetch('http://localhost:5000/orders', {
+        fetch('https://sleepy-bayou-81445.herokuapp.com/orders', {
             method: "POST",
             headers: {
                 "content-type" : "application/json"

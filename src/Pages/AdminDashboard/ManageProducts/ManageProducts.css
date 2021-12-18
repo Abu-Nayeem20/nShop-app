@@ -1,0 +1,10 @@
+
+.manage-product-page{
+    padding: 100px 0;
+}
+.manage-product-page thead{
+    background-color: coral;
+}
+.manage-product-page table{
+    text-align: center;
+}

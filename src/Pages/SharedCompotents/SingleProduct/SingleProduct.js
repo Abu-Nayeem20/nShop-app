@@ -18,7 +18,7 @@ const SingleProduct = ({ product }) => {
     return (
         <div className="col">
         <div className="card h-100 shadow-lg rounded product">
-        <div className='overflow-hidden'><img src={img} className="card-img-top" alt="Product" /></div>
+        <div className='overflow-hidden'><img src={`data:image/png;base64,${img}`} className="card-img-top" alt="Product" /></div>
         <div className="card-body">
             <div className='product-title'>
                 <h4>{name}</h4>

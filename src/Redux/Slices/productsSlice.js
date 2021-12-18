@@ -4,15 +4,24 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 export const fetchProducts = createAsyncThunk(
     'product/fetchProducts',
     async () => {
-      const response = await fetch('http://localhost:5000/products').then(res=> res.json())
+      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/products').then(res=> res.json())
       return response
     }
-)
+);
+
+export const fetchOrders = createAsyncThunk(
+    'order/fetchOrders',
+    async () => {
+      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/allOrders').then(res=> res.json())
+      return response
+    }
+);
 
 const productsSlice = createSlice({
     name: 'product',
     initialState: {
         products: [],
+        orders: [],
         user: {},
         productInputAmount: 1,
         cartItems: [],
@@ -34,6 +43,9 @@ const productsSlice = createSlice({
         removeFromCart: (state, {payload}) => {
             state.cartItems = state.cartItems.filter(product => product._id !== payload._id);
         },
+        deleteProduct: (state, {payload}) => {
+            state.products = state.products.filter(product => product._id !== payload._id);
+        },
         refreshCart: (state) => {
             state.cartItems = [];
         },
@@ -49,10 +61,17 @@ const productsSlice = createSlice({
         builder.addCase(fetchProducts.pending, (state, action) => {
             state.status = 'pending';
         })
+        builder.addCase(fetchOrders.fulfilled, (state, action) => {
+          state.orders = action.payload;
+          state.status = 'success'
+        })
+        builder.addCase(fetchOrders.pending, (state, action) => {
+            state.status = 'pending';
+        })
     },
     
 });
 
-export const { increaseInputValue, decreaseInputValue, addToCart, removeFromCart, storeUser, refreshCart } = productsSlice.actions;
+export const { increaseInputValue, decreaseInputValue, addToCart, removeFromCart, storeUser, refreshCart, deleteProduct } = productsSlice.actions;
 
 export default productsSlice.reducer;
