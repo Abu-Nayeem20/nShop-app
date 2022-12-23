@@ -18,7 +18,7 @@ const Payment = () => {
     const [order, setOrder] = useState({});
 
     useEffect( () => {
-        const url = `https://sleepy-bayou-81445.herokuapp.com/orders/${id}`;
+        const url = `https://nshope-apis.onrender.com/orders/${id}`;
         fetch(url)
         .then(res => res.json())
         .then(data => {

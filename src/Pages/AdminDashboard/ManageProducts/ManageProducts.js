@@ -20,7 +20,7 @@ const ManageProducts = () => {
     const handleProductDelete = (id, product) => {
         const proceed = window.confirm("Want to Delete Product?");
         if(proceed){
-            const url = `https://sleepy-bayou-81445.herokuapp.com/products/${id}`;
+            const url = `https://nshope-apis.onrender.com/products/${id}`;
         fetch(url, {
             method: "DELETE"
         })

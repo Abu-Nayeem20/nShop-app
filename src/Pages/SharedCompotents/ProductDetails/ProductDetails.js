@@ -14,7 +14,7 @@ const ProductDetails = () => {
     const [product, setProduct] = useState({});
 
     useEffect( () => {
-        fetch(`https://sleepy-bayou-81445.herokuapp.com/products/${id}`)
+        fetch(`https://nshope-apis.onrender.com/products/${id}`)
         .then(res => res.json())
         .then(data => {
             setProduct(data);

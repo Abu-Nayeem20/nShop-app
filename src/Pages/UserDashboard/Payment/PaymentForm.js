@@ -20,7 +20,7 @@ const PaymentForm = ({ totalPrice, id }) => {
     const user = useSelector((state) => state.products.user);
 
     useEffect( () => {
-        fetch('https://sleepy-bayou-81445.herokuapp.com/create-payment-intent', {
+        fetch('https://nshope-apis.onrender.com/create-payment-intent', {
             method: "POST",
             headers: {
                 'content-type': 'application/json'
@@ -89,7 +89,7 @@ const PaymentForm = ({ totalPrice, id }) => {
         };      
 
               // Confirm in DB
-        const url = `https://sleepy-bayou-81445.herokuapp.com/orders/${id}`;
+        const url = `https://nshope-apis.onrender.com/orders/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

@@ -16,7 +16,7 @@ const SingleOrders = ({ order }) => {
        
         const updateStatus = {status: updatedStatus};
 
-        const url = `https://sleepy-bayou-81445.herokuapp.com/allOrders/${id}`;
+        const url = `https://nshope-apis.onrender.com/allOrders/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

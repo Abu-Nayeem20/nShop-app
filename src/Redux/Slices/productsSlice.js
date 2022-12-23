@@ -4,7 +4,7 @@ import { createAsyncThunk, createSlice } from '@reduxjs/toolkit'
 export const fetchProducts = createAsyncThunk(
     'product/fetchProducts',
     async () => {
-      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/products').then(res=> res.json())
+      const response = await fetch('https://nshope-apis.onrender.com/products').then(res=> res.json())
       return response
     }
 );
@@ -12,7 +12,7 @@ export const fetchProducts = createAsyncThunk(
 export const fetchOrders = createAsyncThunk(
     'order/fetchOrders',
     async () => {
-      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/allOrders').then(res=> res.json())
+      const response = await fetch('https://nshope-apis.onrender.com/allOrders').then(res=> res.json())
       return response
     }
 );
@@ -20,7 +20,7 @@ export const fetchOrders = createAsyncThunk(
 export const fetchUsers = createAsyncThunk(
     'user/fetchUsers',
     async () => {
-      const response = await fetch('https://sleepy-bayou-81445.herokuapp.com/allUsers').then(res=> res.json())
+      const response = await fetch('https://nshope-apis.onrender.com/allUsers').then(res=> res.json())
       return response
     }
 );

@@ -16,7 +16,7 @@ const SingleUser = ({ user }) => {
        
         const updateRole = {role: updatedRole};
 
-        const url = `https://sleepy-bayou-81445.herokuapp.com/allUsers/${id}`;
+        const url = `https://nshope-apis.onrender.com/allUsers/${id}`;
         fetch(url, {
             method: "PUT",
             headers: {

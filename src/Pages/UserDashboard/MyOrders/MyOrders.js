@@ -14,7 +14,7 @@ const MyOrders = () => {
     const user = useSelector((state) => state.products.user);
 
     useEffect( () => {
-        const url = `https://sleepy-bayou-81445.herokuapp.com/orders?email=${user.email}`;
+        const url = `https://nshope-apis.onrender.com/orders?email=${user.email}`;
         fetch(url)
         .then(res => res.json())
         .then(data => {

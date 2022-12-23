@@ -26,7 +26,7 @@ const handleProductUp = e => {
     formData.append('img', image);
 
 
-    fetch('https://sleepy-bayou-81445.herokuapp.com/products', {
+    fetch('https://nshope-apis.onrender.com/products', {
         method: 'POST',
         body: formData
     })

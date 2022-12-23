@@ -20,7 +20,7 @@ const Login = () => {
         const user = {displayName, email, photo};
         // console.log(user)
             
-        fetch('https://sleepy-bayou-81445.herokuapp.com/users', {
+        fetch('https://nshope-apis.onrender.com/users', {
             method: "PUT",
             headers: {
                 'content-type' : 'application/json'
